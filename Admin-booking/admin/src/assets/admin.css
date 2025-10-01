@@ -1,0 +1,52 @@
+/* src/assets/app.css */
+
+/* :root defines variables for our light theme (the default) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:wght@400;700&display=swap');
+
+:root {
+  --font-family-primary: 'Lora', serif; /* Elegant serif for headings */
+  --font-family-secondary: 'Poppins', sans-serif; /* Modern sans-serif for body */
+  --primary-color: #00796b; /* Calming teal */
+  --primary-color-hover: #005f54; /* Darker teal for hover */
+  --secondary-color: #4a90e2; /* Soft blue */
+  --background-color: #f4f7f9; /* Light neutral background */
+  --card-background-color: #ffffff; /* White cards */
+  --text-color: #333333; /* Dark gray text */
+  --accent-color: #2ecc71; /* Vibrant green for highlights */
+  --border-color: #e0e6eb; /* Light border for contrast */
+  --header-height: 70px; /* Slightly increased for admin panel */
+  --radius: 10px; /* Slightly larger radius for modern look */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* Enhanced shadow */
+}
+
+/* We can define a dark theme by overriding the variables */
+[data-theme='dark'] {
+  --primary-color: #009688;
+  --primary-color-hover: #00695c;
+  --secondary-color: #63b3ed;
+  --background-color: #1e272e;
+  --card-background-color: #2d3436;
+  --text-color: #e6e6e6;
+  --accent-color: #27ae60;
+  --border-color: #3d4852;
+}
+
+/* Basic CSS Reset and Body Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-secondary);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* A general container to center content */
+.container {
+  max-width: 1300px; /* Increased for admin panel */
+  margin: 0 auto;
+  padding: 1.5rem;
+}
